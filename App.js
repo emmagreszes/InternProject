@@ -13,7 +13,7 @@ export default function App() {
 
     return (
       <View style={styles.container}>
-        {Platform.OS === 'ios' || Platform.OS === 'android' && <StatusBar barStyle="dark-content" />}
+        {Platform.OS === 'ios' || Platform.OS === 'android'}
         <NavigationContainer>
           <Stack.Navigator initialRouteName="Home">
             <Stack.Screen name="Home" component={RegisterForm} />
@@ -29,6 +29,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#B37F7F',
   },
 });

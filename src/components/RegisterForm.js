@@ -10,10 +10,9 @@ import ModalDropdown from 'react-native-modal-dropdown';
 const RegisterForm = ({navigation}, props) => {
   const [formValues, handleFormValueChange, setFormValues] = formData({
     name: '',
-    date: '',
+    month: '',
     food: ''
   })
-  const [selectedValue, setSelectedValue] = useState("java");
 
   return (
     <View >
@@ -56,12 +55,17 @@ const RegisterForm = ({navigation}, props) => {
         handleFormValueChange={handleFormValueChange}
       />
 
+      <Text style={styles.header}>Summary: </Text>
+      <View>
+        <Text style={styles.formText}>Name : {formValues.name}</Text>
+        <Text style={styles.formText}>Month: {formValues.month}</Text>
 
+      </View>
 
       <Button
         title="Next"
         onPress={() => navigation.navigate('SecondScreen')}
-        color = '#008000'
+        color = '#5F9961'
       />
     </View>
   )
@@ -79,8 +83,9 @@ const styles = StyleSheet.create({
     paddingLeft: 0
   },
   modal: {
+    marginLeft: 20,
     width: '60%',
-    backgroundColor:'#fff',
+    backgroundColor:'#5F9961',
     borderRadius: 30
   },
   modalFont: {
