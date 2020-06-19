@@ -9,7 +9,7 @@ const SummaryScreen = ({navigation}, props) => {
   return (
     <View style={styles.container}>
 
-      <Text> Summary Screen </Text>
+      <Text> Summary Screen! </Text>
 
       <Button
         title="Start Over"
